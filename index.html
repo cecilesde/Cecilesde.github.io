@@ -7,20 +7,21 @@
   <title>Cécile Soudé — Biomedical & AI Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@300;400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@300;400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&display=swap" rel="stylesheet">
   <style>
+    /* ── PALETTE "DEEP TECH & HEALTH" (Owkin / Aqemia vibe) ── */
     :root {
-      --bg:        #F5F3EF;
-      --bg-card:   #EDEAE3;
-      --ink:       #1A1814;
-      --ink-2:     #4A4740;
-      --ink-3:     #9A9690;
-      --line:      #DDD9D0;
-      --teal:      #0D9488;
-      --teal-light:#E6F4F2;
-      --violet:    #6D5FD8;
-      --violet-lt: #EEEDFB;
-      --tag-bg:    #E8E4DC;
+      --bg:        #F9F8F6; /* Blanc cassé naturel et chaud */
+      --bg-card:   #F0EFEA; /* Légèrement plus sombre pour le survol */
+      --ink:       #1C2331; /* Bleu nuit très profond, scientifique */
+      --ink-2:     #475569; /* Gris bleuté pour la lecture */
+      --ink-3:     #94A3B8; /* Gris clair pour les détails */
+      --line:      #E2E8F0;
+      --teal:      #0F766E; /* Bleu-vert médical/tech profond */
+      --teal-light:#CCFBF1;
+      --violet:    #4338CA;
+      --violet-lt: #E0E7FF;
+      --tag-bg:    #F1F5F9;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -44,16 +45,16 @@
       align-items: center;
       justify-content: space-between;
       padding: 1.4rem 4rem;
-      background: rgba(245,243,239,0.9);
-      backdrop-filter: blur(16px);
+      background: rgba(249,248,246,0.85);
+      backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--line);
     }
 
     .nav-logo {
       font-family: 'DM Mono', monospace;
-      font-size: 0.9rem; /* Augmenté */
+      font-size: 0.9rem;
       letter-spacing: 0.1em;
-      color: var(--ink-3);
+      color: var(--ink);
       text-transform: uppercase;
       font-weight: 500;
     }
@@ -66,10 +67,10 @@
 
     .nav-links a {
       font-family: 'DM Mono', monospace;
-      font-size: 0.85rem; /* Augmenté */
+      font-size: 0.85rem;
       letter-spacing: 0.07em;
       text-transform: uppercase;
-      color: var(--ink-3);
+      color: var(--ink-2);
       text-decoration: none;
       transition: color 0.2s;
     }
@@ -77,30 +78,30 @@
 
     .nav-cta {
       font-family: 'DM Mono', monospace;
-      font-size: 0.85rem; /* Augmenté */
+      font-size: 0.85rem;
       letter-spacing: 0.07em;
       text-transform: uppercase;
-      color: var(--teal);
+      color: var(--bg);
+      background: var(--ink);
       text-decoration: none;
-      border: 1px solid var(--teal);
       padding: 0.5rem 1.2rem;
-      transition: background 0.2s, color 0.2s;
+      transition: background 0.2s;
     }
-    .nav-cta:hover { background: var(--teal); color: #fff; }
+    .nav-cta:hover { background: var(--teal); }
 
     /* ── HERO ── */
     #hero {
       min-height: 100vh;
       display: flex;
       align-items: center;
-      max-width: 880px;
+      max-width: 1000px; /* Plus d'espace pour la grande photo */
       margin: 0 auto;
       padding: 8rem 2rem 4rem;
     }
 
     .hero-inner {
       display: grid;
-      grid-template-columns: 1fr 230px;
+      grid-template-columns: 1fr 300px; /* Colonne photo agrandie */
       gap: 5rem;
       align-items: center;
       width: 100%;
@@ -108,7 +109,7 @@
 
     .hero-eyebrow {
       font-family: 'DM Mono', monospace;
-      font-size: 0.85rem; /* Augmenté */
+      font-size: 0.85rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--teal);
@@ -116,45 +117,40 @@
     }
 
     .hero-name {
-      font-family: 'Fraunces', serif;
-      font-size: clamp(3rem, 6vw, 5rem);
-      font-weight: 300;
+      font-family: 'Fraunces', serif; /* Même typo pour le prénom et le nom */
+      font-size: clamp(3.5rem, 6vw, 5.5rem);
+      font-weight: 400;
       line-height: 1.0;
       letter-spacing: -0.02em;
       color: var(--ink);
       white-space: nowrap;
     }
 
-    .hero-name em {
-      font-style: italic;
-      color: var(--ink-2);
-    }
-
     .hero-rule {
-      width: 2.5rem;
+      width: 3rem;
       height: 2px;
       background: var(--teal);
-      margin: 1.6rem 0;
+      margin: 2rem 0;
     }
 
     .hero-headline {
-      font-size: 1.2rem; /* Augmenté */
+      font-size: 1.25rem;
       font-weight: 500;
       color: var(--ink-2);
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.5rem;
     }
 
     .hero-sub {
-      font-size: 1rem; /* Augmenté */
-      color: var(--ink-3);
-      max-width: 450px;
+      font-size: 1.05rem;
+      color: var(--ink-2);
+      max-width: 500px;
       line-height: 1.8;
     }
 
     .hero-actions {
       display: flex;
-      gap: 0.8rem;
-      margin-top: 2.2rem;
+      gap: 1rem;
+      margin-top: 2.5rem;
       flex-wrap: wrap;
       align-items: center;
     }
@@ -163,50 +159,50 @@
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      padding: 0.8rem 1.6rem;
-      background: var(--ink);
-      color: var(--bg);
+      padding: 0.85rem 1.8rem;
+      background: var(--teal);
+      color: #fff;
       font-family: 'DM Mono', monospace;
-      font-size: 0.85rem; /* Augmenté */
+      font-size: 0.85rem;
       letter-spacing: 0.06em;
       text-transform: uppercase;
       text-decoration: none;
-      transition: background 0.2s;
+      transition: background 0.2s, transform 0.2s;
     }
-    .btn-primary:hover { background: var(--teal); }
+    .btn-primary:hover { background: var(--ink); transform: translateY(-2px); }
 
     .btn-ghost {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      padding: 0.8rem 1.6rem;
+      padding: 0.85rem 1.8rem;
       background: transparent;
-      color: var(--ink-2);
+      color: var(--ink);
       font-family: 'DM Mono', monospace;
-      font-size: 0.85rem; /* Augmenté */
+      font-size: 0.85rem;
       letter-spacing: 0.06em;
       text-transform: uppercase;
       text-decoration: none;
-      border: 1px solid var(--line);
+      border: 1px solid var(--ink-3);
       transition: border-color 0.2s, color 0.2s;
     }
     .btn-ghost:hover { border-color: var(--teal); color: var(--teal); }
 
-    /* Profile */
+    /* Profile (Agrandie et modernisée) */
     .profile-wrap { position: relative; }
 
     .profile-frame {
-      width: 220px;
-      height: 265px;
+      width: 300px;
+      height: 380px;
       position: relative;
     }
 
-    .profile-frame::before {
+    .profile-frame::after {
       content: '';
       position: absolute;
-      top: -7px; left: -7px; right: 7px; bottom: 7px;
+      top: 15px; left: 15px; right: -15px; bottom: -15px;
       border: 1px solid var(--teal);
-      opacity: 0.35;
+      z-index: -1;
     }
 
     .profile-img {
@@ -214,26 +210,26 @@
       object-fit: cover;
       object-position: center top;
       display: block;
-      filter: grayscale(10%);
+      filter: grayscale(15%) contrast(1.1); /* Rendu légèrement plus cinématique/sérieux */
     }
 
     /* ── SECTIONS ── */
     .section-wrap {
-      max-width: 880px;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 6rem 2rem;
+      padding: 7rem 2rem;
     }
 
     .section-header {
       display: flex;
       align-items: center;
-      gap: 1.2rem;
-      margin-bottom: 3.5rem;
+      gap: 1.5rem;
+      margin-bottom: 4rem;
     }
 
     .section-num {
       font-family: 'DM Mono', monospace;
-      font-size: 0.85rem; /* Augmenté */
+      font-size: 0.9rem;
       font-weight: 500;
       color: var(--teal);
       letter-spacing: 0.12em;
@@ -241,8 +237,8 @@
 
     .section-title {
       font-family: 'Fraunces', serif;
-      font-size: 2rem; /* Fortement augmenté */
-      font-weight: 300;
+      font-size: 2.2rem;
+      font-weight: 400;
       color: var(--ink);
       letter-spacing: -0.01em;
     }
@@ -261,24 +257,22 @@
 
     .about-text {
       font-family: 'Fraunces', serif;
-      font-size: 1.25rem; /* Augmenté pour une meilleure lisibilité */
+      font-size: 1.35rem;
       font-weight: 300;
-      line-height: 1.85;
-      color: var(--ink-2);
+      line-height: 1.8;
+      color: var(--ink);
     }
 
-    .about-text strong { color: var(--ink); font-weight: 400; }
     .about-text .hi { color: var(--teal); font-style: italic; }
-    .about-text .vi { color: var(--violet); font-style: italic; }
 
     /* ── TIMELINE ── */
     .timeline { display: flex; flex-direction: column; gap: 0; }
 
     .tl-item {
       display: grid;
-      grid-template-columns: 180px 1fr; /* Élargi pour les dates plus grandes */
-      gap: 2.5rem;
-      padding: 2.5rem 0;
+      grid-template-columns: 200px 1fr;
+      gap: 3rem;
+      padding: 3rem 0;
       border-top: 1px solid var(--line);
       opacity: 0;
       transform: translateY(14px);
@@ -291,20 +285,19 @@
 
     .tl-date {
       font-family: 'DM Mono', monospace;
-      font-size: 0.95rem; /* Fortement augmenté */
-      color: var(--ink-3);
-      letter-spacing: 0.06em;
-      line-height: 1.6;
-      margin-bottom: 0.8rem;
+      font-size: 1rem;
+      color: var(--ink-2);
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
     }
 
     .tl-badge {
       display: inline-block;
       font-family: 'DM Mono', monospace;
-      font-size: 0.75rem; /* Augmenté */
-      letter-spacing: 0.07em;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      padding: 0.3rem 0.6rem;
+      padding: 0.35rem 0.7rem;
     }
 
     .tl-badge.work   { background: var(--teal-light); color: var(--teal); }
@@ -313,86 +306,46 @@
 
     .tl-org {
       font-family: 'DM Mono', monospace;
-      font-size: 1.1rem; /* Fortement augmenté */
+      font-size: 1.15rem;
       font-weight: 500;
       color: var(--teal);
       letter-spacing: 0.04em;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem;
     }
 
     .tl-title {
       font-family: 'Fraunces', serif;
-      font-size: 1.4rem; /* Augmenté */
-      font-weight: 400;
+      font-size: 1.5rem;
+      font-weight: 500;
       color: var(--ink);
-      margin-bottom: 0.8rem;
-      line-height: 1.35;
+      margin-bottom: 1rem;
+      line-height: 1.3;
     }
 
     .tl-desc {
-      font-size: 1rem; /* Augmenté */
+      font-size: 1.05rem;
       color: var(--ink-2);
-      line-height: 1.75;
-      max-width: 600px;
-      margin-bottom: 1.2rem;
+      line-height: 1.7;
+      max-width: 650px;
+      margin-bottom: 1.5rem;
     }
 
-    .tl-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .tl-tags { display: flex; flex-wrap: wrap; gap: 0.6rem; }
 
     /* ── TAGS ── */
     .tag {
       font-family: 'DM Mono', monospace;
-      font-size: 0.75rem; /* Augmenté */
+      font-size: 0.8rem;
       letter-spacing: 0.05em;
       text-transform: uppercase;
-      padding: 0.3rem 0.7rem;
-      background: var(--tag-bg);
+      padding: 0.4rem 0.8rem;
+      background: white;
       color: var(--ink-2);
       border: 1px solid var(--line);
     }
 
-    .tag-t { background: var(--teal-light); color: var(--teal); border-color: rgba(13,148,136,0.2); }
-    .tag-v { background: var(--violet-lt);  color: var(--violet); border-color: rgba(109,95,216,0.2); }
-
-    /* ── SKILLS ── */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1px;
-      background: var(--line);
-      border: 1px solid var(--line);
-    }
-
-    .skill-block {
-      background: var(--bg);
-      padding: 2.5rem;
-    }
-
-    .skill-cat {
-      font-family: 'DM Mono', monospace;
-      font-size: 1rem; /* Fortement augmenté */
-      font-weight: 500;
-      color: var(--ink-2);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin-bottom: 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-    }
-
-    .skill-cat::before {
-      content: '';
-      width: 4px; height: 16px;
-      display: inline-block;
-    }
-
-    .skill-block:nth-child(1) .skill-cat::before { background: var(--teal); }
-    .skill-block:nth-child(2) .skill-cat::before { background: var(--violet); }
-    .skill-block:nth-child(3) .skill-cat::before { background: var(--ink-3); }
-    .skill-block:nth-child(4) .skill-cat::before { background: #C8A96A; }
-
-    .skill-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .tag-t { background: var(--teal-light); color: var(--teal); border-color: rgba(15,118,110,0.2); }
+    .tag-v { background: var(--violet-lt);  color: var(--violet); border-color: rgba(67,56,202,0.2); }
 
     /* ── PROJECTS ── */
     .projects-grid {
@@ -405,7 +358,7 @@
 
     .proj-card {
       background: var(--bg);
-      padding: 2.5rem;
+      padding: 3rem;
       transition: background 0.2s;
       position: relative;
       overflow: hidden;
@@ -424,133 +377,84 @@
     .proj-card.c1::after { background: var(--teal); }
     .proj-card.c2::after { background: var(--violet); }
     .proj-card.c3::after { background: linear-gradient(90deg, var(--teal), var(--violet)); }
-    .proj-card.c4::after { background: var(--line); }
 
     .proj-card:hover { background: var(--bg-card); }
     .proj-card:hover::after { transform: scaleX(1); }
 
     .proj-num {
       font-family: 'DM Mono', monospace;
-      font-size: 0.85rem; /* Augmenté */
+      font-size: 0.9rem;
       color: var(--ink-3);
       letter-spacing: 0.1em;
-      margin-bottom: 1.2rem;
+      margin-bottom: 1.5rem;
     }
 
     .proj-title {
       font-family: 'Fraunces', serif;
-      font-size: 1.35rem; /* Augmenté */
+      font-size: 1.45rem;
       font-weight: 500;
       color: var(--ink);
       line-height: 1.4;
-      margin-bottom: 0.8rem;
+      margin-bottom: 1rem;
     }
 
     .proj-desc {
-      font-size: 1rem; /* Augmenté */
+      font-size: 1.05rem;
       color: var(--ink-2);
-      line-height: 1.72;
-      margin-bottom: 1.5rem;
+      line-height: 1.7;
+      margin-bottom: 1.8rem;
     }
-
-    .proj-placeholder { border: 1px dashed var(--line); background: transparent; }
-    .proj-placeholder .proj-title,
-    .proj-placeholder .proj-desc { color: var(--ink-3); }
-
-    /* ── FOOTER ── */
-    footer {
-      border-top: 1px solid var(--line);
-      padding: 2.5rem 4rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .footer-mono {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.85rem;
-      color: var(--ink-3);
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-    }
-
-    .footer-links { display: flex; gap: 2.5rem; }
-
-    .footer-links a {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.85rem;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      color: var(--ink-3);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .footer-links a:hover { color: var(--teal); }
 
     /* divider */
-    .divider {
-      max-width: 880px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
+    .divider { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
     .divider hr { border: none; border-top: 1px solid var(--line); }
 
     /* fade */
-    .fade {
-      opacity: 0;
-      transform: translateY(14px);
-      transition: opacity 0.55s ease, transform 0.55s ease;
-    }
+    .fade { opacity: 0; transform: translateY(14px); transition: opacity 0.55s ease, transform 0.55s ease; }
     .fade.visible { opacity: 1; transform: none; }
 
     @media (max-width: 768px) {
       nav { padding: 1.1rem 1.5rem; }
       .nav-links, .nav-cta { display: none; }
       .hero-inner { grid-template-columns: 1fr; gap: 3rem; }
-      .profile-frame { width: 180px; height: 215px; }
-      .tl-item { grid-template-columns: 1fr; gap: 1rem; }
+      .profile-frame { width: 100%; max-width: 300px; height: 380px; margin: 0 auto; }
+      .tl-item { grid-template-columns: 1fr; gap: 1.5rem; }
       .tl-left { display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem; }
-      .skills-grid, .projects-grid { grid-template-columns: 1fr; }
-      footer { flex-direction: column; gap: 1.5rem; padding: 2rem 1.5rem; }
+      .tl-date { margin-bottom: 0; }
+      .projects-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
 <nav>
-  <span class="nav-logo">C. Soudé</span>
+  <span class="nav-logo">Cécile Soudé</span>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
-    <li><a href="#experience">Experience</a></li>
     <li><a href="#education">Education</a></li>
-    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
   </ul>
-  <a href="cv.pdf" class="nav-cta" download>CV</a>
+  <a href="cv.pdf" class="nav-cta" download>Download CV</a>
 </nav>
 
 <section id="hero">
   <div class="hero-inner">
     <div>
-      <p class="hero-eyebrow">Imperial College London · MSc Biomedical Engineering</p>
-      <h1 class="hero-name">Cécile <em>Soudé</em></h1>
+      <p class="hero-eyebrow">Bridging Engineering & Life Sciences</p>
+      <h1 class="hero-name">Cécile Soudé</h1>
       <div class="hero-rule"></div>
       <p class="hero-headline">Biomedical &amp; AI Engineer</p>
-      <p class="hero-sub">Bridging the gap between Machine Learning and Life Sciences — from single-molecule diagnostics to multimodal biosignal analysis.</p>
+      <p class="hero-sub">Translating complex clinical challenges into intelligent, data-driven solutions.</p>
       <div class="hero-actions">
-        <a href="cv.pdf" class="btn-primary" download>
-          <svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M6 1v7M3 5l3 3 3-3M1 10h10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Download CV
-        </a>
-        <a href="https://www.linkedin.com/in/cecile-soude" target="_blank" class="btn-ghost">LinkedIn →</a>
-        <a href="mailto:cecile.soude25@imperial.ac.uk" class="btn-ghost">Email →</a>
+        <a href="#projects" class="btn-primary">View Work</a>
+        <a href="mailto:cecile.soude25@imperial.ac.uk" class="btn-ghost">Get in touch</a>
       </div>
     </div>
 
     <div class="profile-wrap">
       <div class="profile-frame">
-        <img src="profile.jpg" alt="Cécile Soudé" class="profile-img"
-          onerror="this.style.display='none'">
+        <img src="profile.jpg" alt="Cécile Soudé" class="profile-img" onerror="this.style.display='none'">
       </div>
     </div>
   </div>
@@ -565,110 +469,21 @@
   </div>
   <div class="about-layout fade">
     <p class="about-text">
-      Sports lover and MSc student in <strong>Biomedical Engineering at Imperial College London</strong>, with a General Engineering background from <strong>Centrale Lyon</strong>. I’ve had the opportunity to work across both academic research and a leading MedTech company, which helped me connect science, <span class="hi">Artificial Intelligence</span>, and technology to real-world clinical challenges. Through my years of competitive sports, I've learned that true impact comes from collaboration, and I always strive to fill the gaps to help a team succeed and drive results. My ultimate goal: to leverage AI and deep tech to support individuals facing illness or injury, helping them rediscover their potential, receive the precise care they need, and experience the joy of being active.
+      I am an MSc student in <strong>Biomedical Engineering at Imperial College London</strong>, with a General Engineering background from <strong>Centrale Lyon</strong>. I naturally fill whatever the team is missing. At Stryker, I was the project anchor. At the GE Healthcare hackathon, I connected the ML logic to the clinical narrative for the pitch.<br><br>
+      I don't need a fixed role — <span class="hi">I need a real problem and people who care about solving it.</span> My goal is to leverage Artificial Intelligence and deep tech to support individuals facing illness or injury, helping them rediscover their potential, receive the care they need, and experience the joy of being active.
     </p>
-  </div>
-</div>
-
-<div class="divider"><hr></div>
-<div class="section-wrap" id="experience">
-  <div class="section-header">
-    <span class="section-num">02</span>
-    <h2 class="section-title">Experience</h2>
-    <div class="section-line"></div>
-  </div>
-
-  <div class="timeline">
-
-    <div class="tl-item">
-      <div class="tl-left">
-        <p class="tl-date">Jan – Aug 2026</p>
-        <span class="tl-badge work">Research</span>
-      </div>
-      <div>
-        <p class="tl-org">Imperial College London</p>
-        <h3 class="tl-title">MSc Thesis — Predictive Biomechanics & Sensorimotor Learning</h3>
-        <p class="tl-desc">Synchronized multimodal dataset (EMG · 3D Motion Capture · Force Plates) to model how a barefoot neuromuscular reset recalibrates CNS motor control — measuring the temporal decay of a sensorimotor aftereffect stride by stride.</p>
-        <div class="tl-tags">
-          <span class="tag tag-t">Python</span>
-          <span class="tag tag-t">MATLAB</span>
-          <span class="tag">OpenSim</span>
-          <span class="tag">Time-Series ML</span>
-          <span class="tag">EMG</span>
-          <span class="tag">Motion Capture</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="tl-item">
-      <div class="tl-left">
-        <p class="tl-date">Feb 2026</p>
-        <span class="tl-badge award">Top 8 / 23</span>
-      </div>
-      <div>
-        <p class="tl-org">Mistral AI × GE Healthcare</p>
-        <h3 class="tl-title">AI & Healthcare Hackathon Finalist</h3>
-        <p class="tl-desc">Multi-agent RAG workflow grounded on RECIST 1.1 oncology guidelines for hallucination-free tumor MRI reports. XGBoost + Learning-to-Rank clinical triage system to replace FIFO hospital queues.</p>
-        <div class="tl-tags">
-          <span class="tag tag-t">Agentic AI</span>
-          <span class="tag tag-t">RAG</span>
-          <span class="tag tag-v">XGBoost</span>
-          <span class="tag tag-v">LLMs</span>
-          <span class="tag">Clinical NLP</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="tl-item">
-      <div class="tl-left">
-        <p class="tl-date">Feb – Aug 2025</p>
-        <span class="tl-badge work">Research Eng.</span>
-      </div>
-      <div>
-        <p class="tl-org">EMBL × UNSW Sydney</p>
-        <h3 class="tl-title">Research Engineer — Computer Vision & Single-Molecule Science</h3>
-        <p class="tl-desc">Built a computer vision pipeline from scratch for Single-Particle Tracking in fluorescence microscopy. Achieved nanometer-scale localization accuracy under low SNR. Upgraded diagnostic equipment for Parkinson's disease research.</p>
-        <div class="tl-tags">
-          <span class="tag tag-t">OpenCV</span>
-          <span class="tag tag-t">Python</span>
-          <span class="tag">Gaussian Fitting</span>
-          <span class="tag">Subpixel Refinement</span>
-          <span class="tag">Signal Processing</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="tl-item">
-      <div class="tl-left">
-        <p class="tl-date">May – Dec 2024</p>
-        <span class="tl-badge work">Industry</span>
-      </div>
-      <div>
-        <p class="tl-org">Stryker — Grenoble, France</p>
-        <h3 class="tl-title">R&D Biomechanics Laboratory Intern</h3>
-        <p class="tl-desc">Project Manager for a research campaign on Stryker's reverse shoulder prosthesis. Led testing validations in a COFRAC-accredited lab under FDA and EU MDR regulatory standards.</p>
-        <div class="tl-tags">
-          <span class="tag">Biomechanics</span>
-          <span class="tag">FDA / MDR</span>
-          <span class="tag">Project Management</span>
-          <span class="tag">Medical Devices</span>
-        </div>
-      </div>
-    </div>
-
   </div>
 </div>
 
 <div class="divider"><hr></div>
 <div class="section-wrap" id="education">
   <div class="section-header">
-    <span class="section-num">03</span>
+    <span class="section-num">02</span>
     <h2 class="section-title">Education</h2>
     <div class="section-line"></div>
   </div>
 
   <div class="timeline">
-
     <div class="tl-item">
       <div class="tl-left">
         <p class="tl-date">Oct 2025 – Aug 2026</p>
@@ -692,61 +507,87 @@
         <p class="tl-desc">Mathematics · Computer Science · Image Processing · Mechanical Engineering · Health Engineering · CFD · Economics</p>
       </div>
     </div>
-
   </div>
 </div>
 
 <div class="divider"><hr></div>
-<div class="section-wrap" id="skills">
+<div class="section-wrap" id="experience">
   <div class="section-header">
-    <span class="section-num">04</span>
-    <h2 class="section-title">Technical Skills</h2>
+    <span class="section-num">03</span>
+    <h2 class="section-title">Experience</h2>
     <div class="section-line"></div>
   </div>
-  <div class="skills-grid fade">
-    <div class="skill-block">
-      <p class="skill-cat">AI &amp; Machine Learning</p>
-      <div class="skill-tags">
-        <span class="tag tag-t">scikit-learn</span>
-        <span class="tag tag-t">XGBoost</span>
-        <span class="tag tag-t">RAG Pipelines</span>
-        <span class="tag tag-t">Agentic AI</span>
-        <span class="tag">LLM Grounding</span>
-        <span class="tag">Learning-to-Rank</span>
-        <span class="tag">Time-Series ML</span>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-left">
+        <p class="tl-date">Jan – Aug 2026</p>
+        <span class="tl-badge work">Research</span>
+      </div>
+      <div>
+        <p class="tl-org">Imperial College London</p>
+        <h3 class="tl-title">MSc Thesis — Predictive Biomechanics & Sensorimotor Learning</h3>
+        <p class="tl-desc">Synchronized multimodal dataset (EMG, 3D Motion Capture, Force Plates) to model how a barefoot neuromuscular reset recalibrates CNS motor control, measuring the temporal decay of a sensorimotor aftereffect.</p>
+        <div class="tl-tags">
+          <span class="tag tag-t">Python</span>
+          <span class="tag tag-t">MATLAB</span>
+          <span class="tag tag-v">OpenSim</span>
+          <span class="tag">Time-Series ML</span>
+          <span class="tag">EMG</span>
+        </div>
       </div>
     </div>
-    <div class="skill-block">
-      <p class="skill-cat">Biomedical Engineering</p>
-      <div class="skill-tags">
-        <span class="tag tag-v">EMG Analysis</span>
-        <span class="tag tag-v">3D Motion Capture</span>
-        <span class="tag tag-v">Force Plate Kinetics</span>
-        <span class="tag tag-v">OpenSim</span>
-        <span class="tag">Medical Devices</span>
-        <span class="tag">FDA / MDR</span>
+
+    <div class="tl-item">
+      <div class="tl-left">
+        <p class="tl-date">Feb 2026</p>
+        <span class="tl-badge award">Top 8 / 23</span>
+      </div>
+      <div>
+        <p class="tl-org">Mistral AI × GE Healthcare</p>
+        <h3 class="tl-title">AI & Healthcare Hackathon Finalist</h3>
+        <p class="tl-desc">Developed a multi-agent RAG workflow grounded on RECIST 1.1 oncology guidelines for hallucination-free tumor MRI reports, paired with an XGBoost clinical triage system.</p>
+        <div class="tl-tags">
+          <span class="tag tag-t">Agentic AI</span>
+          <span class="tag tag-t">RAG</span>
+          <span class="tag tag-v">XGBoost</span>
+          <span class="tag tag-v">LLMs</span>
+        </div>
       </div>
     </div>
-    <div class="skill-block">
-      <p class="skill-cat">Programming</p>
-      <div class="skill-tags">
-        <span class="tag tag-t">Python</span>
-        <span class="tag tag-t">MATLAB</span>
-        <span class="tag">OpenCV</span>
-        <span class="tag">NumPy · Pandas</span>
-        <span class="tag">Git / GitHub</span>
-        <span class="tag">scikit-learn</span>
+
+    <div class="tl-item">
+      <div class="tl-left">
+        <p class="tl-date">Feb – Aug 2025</p>
+        <span class="tl-badge work">Research Eng.</span>
+      </div>
+      <div>
+        <p class="tl-org">EMBL × UNSW Sydney</p>
+        <h3 class="tl-title">Research Engineer — Computer Vision</h3>
+        <p class="tl-desc">Built a computer vision pipeline from scratch for Single-Particle Tracking in fluorescence microscopy. Achieved nanometer-scale localization accuracy under low SNR for Parkinson's disease research.</p>
+        <div class="tl-tags">
+          <span class="tag tag-t">OpenCV</span>
+          <span class="tag tag-t">Python</span>
+          <span class="tag">Gaussian Fitting</span>
+          <span class="tag">Signal Processing</span>
+        </div>
       </div>
     </div>
-    <div class="skill-block">
-      <p class="skill-cat">Data Science</p>
-      <div class="skill-tags">
-        <span class="tag">Signal Processing</span>
-        <span class="tag">Computer Vision</span>
-        <span class="tag">Multimodal Data</span>
-        <span class="tag">Statistical Analysis</span>
-        <span class="tag">Gaussian Fitting</span>
-        <span class="tag">Subpixel Refinement</span>
+
+    <div class="tl-item">
+      <div class="tl-left">
+        <p class="tl-date">May – Dec 2024</p>
+        <span class="tl-badge work">Industry</span>
+      </div>
+      <div>
+        <p class="tl-org">Stryker</p>
+        <h3 class="tl-title">R&D Biomechanics Laboratory Intern</h3>
+        <p class="tl-desc">Acted as the project anchor for a research campaign on Stryker's reverse shoulder prosthesis. Led testing validations in a COFRAC-accredited lab under FDA and EU MDR regulatory standards.</p>
+        <div class="tl-tags">
+          <span class="tag">Biomechanics</span>
+          <span class="tag">FDA / MDR</span>
+          <span class="tag">Medical Devices</span>
+        </div>
       </div>
     </div>
   </div>
@@ -755,67 +596,46 @@
 <div class="divider"><hr></div>
 <div class="section-wrap" id="projects">
   <div class="section-header">
-    <span class="section-num">05</span>
-    <h2 class="section-title">Projects</h2>
+    <span class="section-num">04</span>
+    <h2 class="section-title">Selected Projects</h2>
     <div class="section-line"></div>
   </div>
   <div class="projects-grid fade">
 
     <div class="proj-card c1">
-      <p class="proj-num">01 — 2026 · Imperial College London</p>
-      <h3 class="proj-title">Barefoot Running as a Neuromuscular Reset</h3>
-      <p class="proj-desc">Can 4 minutes rewire how the brain controls every stride? Synchronized multimodal biosignal dataset to model error-based CNS recalibration and the temporal decay of a sensorimotor aftereffect.</p>
+      <p class="proj-num">01 — 2026</p>
+      <h3 class="proj-title">Neuromuscular Reset Analysis</h3>
+      <p class="proj-desc">Synchronized multimodal biosignal dataset modeling error-based CNS recalibration and the temporal decay of a sensorimotor aftereffect.</p>
       <div class="tl-tags">
         <span class="tag tag-t">Python</span>
-        <span class="tag tag-t">MATLAB</span>
         <span class="tag">OpenSim</span>
-        <span class="tag">Time-Series</span>
         <span class="tag">EMG</span>
       </div>
     </div>
 
     <div class="proj-card c2">
-      <p class="proj-num">02 — 2026 · Mistral AI × GE Healthcare</p>
-      <h3 class="proj-title">Agentic AI for Oncology Reporting</h3>
-      <p class="proj-desc">Multi-agent RAG workflow grounded on RECIST 1.1 for hallucination-free tumor MRI reports. XGBoost clinical triage to replace FIFO hospital queues. Top 8 of 23 teams.</p>
+      <p class="proj-num">02 — 2026</p>
+      <h3 class="proj-title">Agentic AI for Oncology</h3>
+      <p class="proj-desc">Multi-agent RAG workflow grounded on clinical guidelines for hallucination-free tumor MRI reports. Built during the GE Healthcare Hackathon.</p>
       <div class="tl-tags">
         <span class="tag tag-t">RAG</span>
-        <span class="tag tag-t">Agentic AI</span>
         <span class="tag tag-v">XGBoost</span>
-        <span class="tag tag-v">LLMs</span>
+        <span class="tag">LLMs</span>
       </div>
     </div>
 
     <div class="proj-card c3">
-      <p class="proj-num">03 — 2025 · EMBL × UNSW Sydney</p>
-      <h3 class="proj-title">Single-Molecule Tracking Pipeline</h3>
-      <p class="proj-desc">Computer vision pipeline for nanometer-scale particle localization in low-SNR fluorescence microscopy. Built for Parkinson's disease diagnostics research.</p>
+      <p class="proj-num">03 — 2025</p>
+      <h3 class="proj-title">Single-Molecule Tracking</h3>
+      <p class="proj-desc">Computer vision pipeline for nanometer-scale particle localization in low-SNR fluorescence microscopy for diagnostics research.</p>
       <div class="tl-tags">
         <span class="tag tag-t">OpenCV</span>
         <span class="tag tag-t">Python</span>
-        <span class="tag">Gaussian Fitting</span>
       </div>
-    </div>
-
-    <div class="proj-card c4 proj-placeholder">
-      <p class="proj-num">04 — Coming Soon</p>
-      <h3 class="proj-title">Next Project</h3>
-      <p class="proj-desc">Placeholder — replace with your next research project, open-source tool, or proof of concept.</p>
-      <div class="tl-tags"><span class="tag">TBD</span></div>
     </div>
 
   </div>
 </div>
-
-<div class="divider"><hr></div>
-<footer>
-  <span class="footer-mono">© 2026 Cécile Soudé</span>
-  <div class="footer-links">
-    <a href="https://www.linkedin.com/in/cecile-soude" target="_blank">LinkedIn</a>
-    <a href="https://github.com/Cecilesde" target="_blank">GitHub</a>
-    <a href="mailto:cecile.soude25@imperial.ac.uk">Email</a>
-  </div>
-</footer>
 
 <script>
   const io = new IntersectionObserver((entries) => {
