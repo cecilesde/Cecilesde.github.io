@@ -7,7 +7,7 @@
   <title>Cécile Soudé — Biomedical & AI Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@300;400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@300;400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg:        #F5F3EF;
@@ -51,9 +51,10 @@
 
     .nav-logo {
       font-family: 'DM Mono', monospace;
-      font-size: 0.72rem;
+      font-size: 0.8rem;
+      font-weight: 500;
       letter-spacing: 0.1em;
-      color: var(--ink-3);
+      color: var(--ink-2);
       text-transform: uppercase;
     }
 
@@ -65,7 +66,7 @@
 
     .nav-links a {
       font-family: 'DM Mono', monospace;
-      font-size: 0.7rem;
+      font-size: 0.8rem;
       letter-spacing: 0.07em;
       text-transform: uppercase;
       color: var(--ink-3);
@@ -76,13 +77,13 @@
 
     .nav-cta {
       font-family: 'DM Mono', monospace;
-      font-size: 0.68rem;
+      font-size: 0.75rem;
       letter-spacing: 0.07em;
       text-transform: uppercase;
       color: var(--teal);
       text-decoration: none;
       border: 1px solid var(--teal);
-      padding: 0.38rem 0.95rem;
+      padding: 0.4rem 1rem;
       transition: background 0.2s, color 0.2s;
     }
     .nav-cta:hover { background: var(--teal); color: #fff; }
@@ -107,7 +108,7 @@
 
     .hero-eyebrow {
       font-family: 'DM Mono', monospace;
-      font-size: 0.68rem;
+      font-size: 0.8rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--teal);
@@ -137,16 +138,16 @@
     }
 
     .hero-headline {
-      font-size: 1rem;
-      font-weight: 400;
+      font-size: 1.1rem;
+      font-weight: 500;
       color: var(--ink-2);
       margin-bottom: 0.4rem;
     }
 
     .hero-sub {
-      font-size: 0.875rem;
+      font-size: 0.95rem;
       color: var(--ink-3);
-      max-width: 400px;
+      max-width: 450px;
       line-height: 1.8;
     }
 
@@ -158,36 +159,29 @@
       align-items: center;
     }
 
-    .btn-primary {
+    .btn-primary, .btn-ghost {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      padding: 0.68rem 1.4rem;
-      background: var(--ink);
-      color: var(--bg);
+      padding: 0.75rem 1.5rem;
       font-family: 'DM Mono', monospace;
-      font-size: 0.7rem;
+      font-size: 0.8rem;
       letter-spacing: 0.06em;
       text-transform: uppercase;
       text-decoration: none;
-      transition: background 0.2s;
+      transition: all 0.2s;
+    }
+    
+    .btn-primary {
+      background: var(--ink);
+      color: var(--bg);
     }
     .btn-primary:hover { background: var(--teal); }
 
     .btn-ghost {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.68rem 1.4rem;
       background: transparent;
       color: var(--ink-2);
-      font-family: 'DM Mono', monospace;
-      font-size: 0.7rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      text-decoration: none;
       border: 1px solid var(--line);
-      transition: border-color 0.2s, color 0.2s;
     }
     .btn-ghost:hover { border-color: var(--teal); color: var(--teal); }
 
@@ -232,14 +226,15 @@
 
     .section-num {
       font-family: 'DM Mono', monospace;
-      font-size: 0.62rem;
+      font-size: 0.8rem;
+      font-weight: 500;
       color: var(--teal);
       letter-spacing: 0.12em;
     }
 
     .section-title {
       font-family: 'Fraunces', serif;
-      font-size: 1.45rem;
+      font-size: 1.8rem;
       font-weight: 300;
       color: var(--ink);
       letter-spacing: -0.01em;
@@ -253,66 +248,29 @@
 
     /* ── ABOUT ── */
     .about-layout {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 4rem;
-      align-items: start;
+      max-width: 750px; /* Optimized reading width */
+      margin: 0 auto;
     }
 
     .about-text {
       font-family: 'Fraunces', serif;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       font-weight: 300;
-      line-height: 1.85;
+      line-height: 1.8;
       color: var(--ink-2);
     }
 
     .about-text strong { color: var(--ink); font-weight: 400; }
     .about-text .hi { color: var(--teal); font-style: italic; }
-    .about-text .vi { color: var(--violet); font-style: italic; }
-
-    .about-stats {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      border: 1px solid var(--line);
-      min-width: 160px;
-    }
-
-    .stat-item {
-      padding: 1.2rem 1.4rem;
-      border-bottom: 1px solid var(--line);
-    }
-    .stat-item:last-child { border-bottom: none; }
-
-    .stat-val {
-      font-family: 'Fraunces', serif;
-      font-size: 1.6rem;
-      font-weight: 400;
-      line-height: 1;
-      margin-bottom: 0.25rem;
-    }
-
-    .stat-val.t { color: var(--teal); }
-    .stat-val.v { color: var(--violet); }
-
-    .stat-lbl {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.58rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--ink-3);
-      line-height: 1.5;
-    }
 
     /* ── TIMELINE ── */
     .timeline { display: flex; flex-direction: column; gap: 0; }
 
     .tl-item {
       display: grid;
-      grid-template-columns: 130px 1fr;
+      grid-template-columns: 180px 1fr;
       gap: 2.5rem;
-      padding: 2.2rem 0;
+      padding: 2.5rem 0;
       border-top: 1px solid var(--line);
       opacity: 0;
       transform: translateY(14px);
@@ -321,67 +279,68 @@
     .tl-item:last-child { border-bottom: 1px solid var(--line); }
     .tl-item.visible { opacity: 1; transform: none; }
 
-    .tl-left { padding-top: 0.1rem; }
+    .tl-left { padding-top: 0.2rem; }
 
     .tl-date {
       font-family: 'DM Mono', monospace;
-      font-size: 0.62rem;
+      font-size: 0.85rem;
+      font-weight: 400;
       color: var(--ink-3);
       letter-spacing: 0.06em;
       line-height: 1.6;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.8rem;
     }
 
     .tl-badge {
       display: inline-block;
       font-family: 'DM Mono', monospace;
-      font-size: 0.56rem;
+      font-size: 0.7rem;
+      font-weight: 500;
       letter-spacing: 0.07em;
       text-transform: uppercase;
-      padding: 0.18rem 0.5rem;
+      padding: 0.25rem 0.6rem;
     }
 
     .tl-badge.work   { background: var(--teal-light); color: var(--teal); }
     .tl-badge.edu    { background: var(--violet-lt);  color: var(--violet); }
-    .tl-badge.award  {
-      background: #FEF3CD;
-      color: #92600A;
-    }
+    .tl-badge.award  { background: #FEF3CD; color: #92600A; }
 
     .tl-org {
       font-family: 'DM Mono', monospace;
-      font-size: 0.65rem;
+      font-size: 0.95rem;
+      font-weight: 500;
       color: var(--teal);
       letter-spacing: 0.04em;
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.5rem;
     }
 
     .tl-title {
       font-family: 'Fraunces', serif;
-      font-size: 1.05rem;
+      font-size: 1.3rem;
       font-weight: 400;
       color: var(--ink);
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.8rem;
       line-height: 1.35;
     }
 
     .tl-desc {
-      font-size: 0.865rem;
+      font-size: 0.95rem;
       color: var(--ink-2);
       line-height: 1.75;
-      max-width: 540px;
-      margin-bottom: 0.9rem;
+      max-width: 600px;
+      margin-bottom: 1rem;
     }
 
-    .tl-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+    .tl-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 
     /* ── TAGS ── */
     .tag {
       font-family: 'DM Mono', monospace;
-      font-size: 0.6rem;
+      font-size: 0.75rem;
+      font-weight: 400;
       letter-spacing: 0.05em;
       text-transform: uppercase;
-      padding: 0.2rem 0.55rem;
+      padding: 0.3rem 0.7rem;
       background: var(--tag-bg);
       color: var(--ink-2);
       border: 1px solid var(--line);
@@ -401,24 +360,25 @@
 
     .skill-block {
       background: var(--bg);
-      padding: 2rem 2.2rem;
+      padding: 2.5rem;
     }
 
     .skill-cat {
       font-family: 'DM Mono', monospace;
-      font-size: 0.62rem;
-      color: var(--ink-3);
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--ink-2);
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      margin-bottom: 1.1rem;
+      margin-bottom: 1.5rem;
       display: flex;
       align-items: center;
-      gap: 0.6rem;
+      gap: 0.8rem;
     }
 
     .skill-cat::before {
       content: '';
-      width: 3px; height: 12px;
+      width: 4px; height: 16px;
       display: inline-block;
     }
 
@@ -427,7 +387,7 @@
     .skill-block:nth-child(3) .skill-cat::before { background: var(--ink-3); }
     .skill-block:nth-child(4) .skill-cat::before { background: #C8A96A; }
 
-    .skill-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 
     /* ── PROJECTS ── */
     .projects-grid {
@@ -440,7 +400,7 @@
 
     .proj-card {
       background: var(--bg);
-      padding: 2.2rem;
+      padding: 2.5rem;
       transition: background 0.2s;
       position: relative;
       overflow: hidden;
@@ -450,7 +410,7 @@
       content: '';
       position: absolute;
       top: 0; left: 0; right: 0;
-      height: 2px;
+      height: 3px;
       transform: scaleX(0);
       transform-origin: left;
       transition: transform 0.3s ease;
@@ -466,26 +426,27 @@
 
     .proj-num {
       font-family: 'DM Mono', monospace;
-      font-size: 0.58rem;
+      font-size: 0.8rem;
+      font-weight: 500;
       color: var(--ink-3);
       letter-spacing: 0.1em;
-      margin-bottom: 1.1rem;
+      margin-bottom: 1.2rem;
     }
 
     .proj-title {
       font-family: 'Fraunces', serif;
-      font-size: 1rem;
-      font-weight: 400;
+      font-size: 1.25rem;
+      font-weight: 500;
       color: var(--ink);
       line-height: 1.4;
-      margin-bottom: 0.65rem;
+      margin-bottom: 0.8rem;
     }
 
     .proj-desc {
-      font-size: 0.845rem;
+      font-size: 0.95rem;
       color: var(--ink-2);
       line-height: 1.72;
-      margin-bottom: 1.3rem;
+      margin-bottom: 1.5rem;
     }
 
     .proj-placeholder { border: 1px dashed var(--line); background: transparent; }
@@ -495,7 +456,7 @@
     /* ── FOOTER ── */
     footer {
       border-top: 1px solid var(--line);
-      padding: 2rem 4rem;
+      padding: 2.5rem 4rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -503,17 +464,17 @@
 
     .footer-mono {
       font-family: 'DM Mono', monospace;
-      font-size: 0.62rem;
+      font-size: 0.8rem;
       color: var(--ink-3);
       letter-spacing: 0.07em;
       text-transform: uppercase;
     }
 
-    .footer-links { display: flex; gap: 2rem; }
+    .footer-links { display: flex; gap: 2.5rem; }
 
     .footer-links a {
       font-family: 'DM Mono', monospace;
-      font-size: 0.62rem;
+      font-size: 0.8rem;
       letter-spacing: 0.07em;
       text-transform: uppercase;
       color: var(--ink-3);
@@ -538,36 +499,33 @@
     }
     .fade.visible { opacity: 1; transform: none; }
 
-    @media (max-width: 680px) {
+    @media (max-width: 768px) {
       nav { padding: 1.1rem 1.5rem; }
       .nav-links, .nav-cta { display: none; }
-      .hero-inner { grid-template-columns: 1fr; }
-      .profile-frame { width: 160px; height: 195px; }
-      .about-layout { grid-template-columns: 1fr; }
-      .about-stats { flex-direction: row; flex-wrap: wrap; }
-      .stat-item { flex: 1; min-width: 120px; }
-      .tl-item { grid-template-columns: 1fr; gap: 0.4rem; }
-      .tl-left { display: flex; gap: 1rem; align-items: center; }
+      .hero-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .profile-frame { width: 180px; height: 215px; }
+      .tl-item { grid-template-columns: 1fr; gap: 0.8rem; padding: 2rem 0; }
+      .tl-left { display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem; }
+      .tl-date { margin-bottom: 0; }
       .skills-grid, .projects-grid { grid-template-columns: 1fr; }
-      footer { flex-direction: column; gap: 1rem; padding: 1.5rem; }
+      footer { flex-direction: column; gap: 1.5rem; padding: 2rem 1.5rem; text-align: center; }
     }
   </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <span class="nav-logo">C. Soudé</span>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
   </ul>
   <a href="cv.pdf" class="nav-cta" download>CV</a>
 </nav>
 
-<!-- HERO -->
 <section id="hero">
   <div class="hero-inner">
     <div>
@@ -578,7 +536,7 @@
       <p class="hero-sub">Bridging the gap between Machine Learning and Life Sciences — from single-molecule diagnostics to multimodal biosignal analysis.</p>
       <div class="hero-actions">
         <a href="cv.pdf" class="btn-primary" download>
-          <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M6 1v7M3 5l3 3 3-3M1 10h10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M6 1v7M3 5l3 3 3-3M1 10h10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Download CV
         </a>
         <a href="https://www.linkedin.com/in/cecile-soude" target="_blank" class="btn-ghost">LinkedIn →</a>
@@ -588,14 +546,12 @@
 
     <div class="profile-wrap">
       <div class="profile-frame">
-        <img src="profile.jpg" alt="Cécile Soudé" class="profile-img"
-          onerror="this.style.display='none'">
+        <img src="profile.jpg" alt="Cécile Soudé" class="profile-img" onerror="this.style.display='none'">
       </div>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
 <div class="divider"><hr></div>
 <div class="section-wrap" id="about">
   <div class="section-header">
@@ -605,40 +561,21 @@
   </div>
   <div class="about-layout fade">
     <p class="about-text">
-      I'm a biomedical engineer with a deep conviction that <strong>AI is biology's most powerful instrument</strong> — not because it replaces intuition, but because it makes the invisible measurable. From tracking <span class="hi">single molecules at nanometer resolution</span> for Parkinson's diagnostics, to decoding how the <span class="vi">nervous system learns to move</span>, I build pipelines where being wrong has real consequences. I've always been an athlete first — judo black belt, footballer, runner — which means I understand both the physics of the body and what it feels like when it breaks. That's what drives me toward <strong>AI for health</strong>: not as a career choice, but as a conviction.
+      As a lifelong athlete and biomedical engineer, I know what it means to push the human body—and what it takes to rebuild it when it breaks. Whether it's through twenty years on the tatami or tracking my 5km baseline, movement is at the core of my identity. With a dual background in <strong>General Engineering from Centrale Lyon</strong> and <strong>Biomedical Engineering at Imperial College London</strong>, I bridge the gap between complex biology and data. <br><br>
+      I’ve had the opportunity to work across both rigorous academic research and a leading MedTech environment, which helped me connect science and <span class="hi">machine learning</span> to real-world clinical challenges. My ultimate goal is simple: to leverage AI and deep tech to support individuals facing illness or injury, helping them rediscover their potential, receive precise care, and experience the joy of being active.
     </p>
-    <div class="about-stats">
-      <div class="stat-item">
-        <div class="stat-val t">3</div>
-        <div class="stat-lbl">Countries<br>worked in</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-val v">Top 8</div>
-        <div class="stat-lbl">Mistral AI ×<br>GE Healthcare</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-val t">nm</div>
-        <div class="stat-lbl">Localization<br>accuracy</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-val v">18 yrs</div>
-        <div class="stat-lbl">Judo —<br>Black Belt</div>
-      </div>
-    </div>
   </div>
 </div>
 
-<!-- EXPERIENCE -->
 <div class="divider"><hr></div>
 <div class="section-wrap" id="experience">
   <div class="section-header">
     <span class="section-num">02</span>
-    <h2 class="section-title">Experience &amp; Education</h2>
+    <h2 class="section-title">Experience</h2>
     <div class="section-line"></div>
   </div>
 
   <div class="timeline">
-
     <div class="tl-item">
       <div class="tl-left">
         <p class="tl-date">Jan – Aug 2026</p>
@@ -714,11 +651,22 @@
         </div>
       </div>
     </div>
+  </div>
+</div>
 
+<div class="divider"><hr></div>
+<div class="section-wrap" id="education">
+  <div class="section-header">
+    <span class="section-num">03</span>
+    <h2 class="section-title">Education</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="timeline">
     <div class="tl-item">
       <div class="tl-left">
         <p class="tl-date">Oct 2025 – Aug 2026</p>
-        <span class="tl-badge edu">Education</span>
+        <span class="tl-badge edu">MSc</span>
       </div>
       <div>
         <p class="tl-org">Imperial College London</p>
@@ -730,7 +678,7 @@
     <div class="tl-item">
       <div class="tl-left">
         <p class="tl-date">Sept 2022 – Aug 2026</p>
-        <span class="tl-badge edu">Education</span>
+        <span class="tl-badge edu">MEng</span>
       </div>
       <div>
         <p class="tl-org">École Centrale de Lyon</p>
@@ -738,15 +686,13 @@
         <p class="tl-desc">Mathematics · Computer Science · Image Processing · Mechanical Engineering · Health Engineering · CFD · Economics</p>
       </div>
     </div>
-
   </div>
 </div>
 
-<!-- SKILLS -->
 <div class="divider"><hr></div>
 <div class="section-wrap" id="skills">
   <div class="section-header">
-    <span class="section-num">03</span>
+    <span class="section-num">04</span>
     <h2 class="section-title">Technical Skills</h2>
     <div class="section-line"></div>
   </div>
@@ -799,11 +745,10 @@
   </div>
 </div>
 
-<!-- PROJECTS -->
 <div class="divider"><hr></div>
 <div class="section-wrap" id="projects">
   <div class="section-header">
-    <span class="section-num">04</span>
+    <span class="section-num">05</span>
     <h2 class="section-title">Projects</h2>
     <div class="section-line"></div>
   </div>
@@ -855,7 +800,6 @@
   </div>
 </div>
 
-<!-- FOOTER -->
 <div class="divider"><hr></div>
 <footer>
   <span class="footer-mono">© 2026 Cécile Soudé</span>
