@@ -218,10 +218,13 @@
     /* ── PROJECTS (FORMAT TABLEAU 2x2) ── */
     .projects-grid { 
       display: grid; 
-      grid-template-columns: repeat(3, 1fr); /* 3 colonnes = plus de place pour le titre */
-      gap: 3rem; /* Beaucoup d'espace entre les cartes */
+      /* Si l'écran est large, 2 colonnes. Si l'écran est petit, 1 colonne. */
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+      gap: 4rem; 
       background: transparent; 
       border: none;
+      max-width: 900px; /* Aligné sur ton About */
+      margin: 0 auto;
     }
     
     .proj-card {
