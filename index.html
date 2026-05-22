@@ -218,18 +218,18 @@
     /* ── PROJECTS (FORMAT TABLEAU 2x2) ── */
     .projects-grid { 
       display: grid; 
-      grid-template-columns: 1fr 1fr; 
-      gap: 1px; /* Crée la bordure du tableau */
-      background: var(--line); 
-      border: 1px solid var(--line);
+      grid-template-columns: repeat(3, 1fr); /* 3 colonnes = plus de place pour le titre */
+      gap: 3rem; /* Beaucoup d'espace entre les cartes */
+      background: transparent; 
+      border: none;
     }
     
     .proj-card {
-      background: var(--bg-card);
-      padding: 2.5rem;
-      display: flex; flex-direction: column;
-      position: relative;
-      transition: background 0.2s;
+      background: transparent;
+      padding: 0;
+      border: none;
+      display: flex;
+      flex-direction: column;
     }
 
     /* Animation au survol de la carte (petite ligne en haut) */
@@ -262,7 +262,11 @@
     .proj-vis img { width: 100%; height: 100%; object-fit: cover; }
 
     .proj-num { font-family: 'DM Mono', monospace; font-size: 0.9rem; color: var(--ink-3); letter-spacing: 0.05em; margin-bottom: 1rem; }
-    .proj-title { font-family: 'Fraunces', serif; font-size: 1.35rem; font-weight: 500; color: var(--ink); line-height: 1.4; margin-bottom: 0.8rem; }
+    .proj-title {font-family: 'Fraunces', serif; font-size: 1.2rem; /* Légèrement plus petit pour éviter de faire 4 lignes */ font-weight: 500; color: var(--ink); 
+    line-height: 1.3; 
+    margin-bottom: 0.8rem;
+    min-height: 3em; /* Garantit que tous les titres font la même hauteur */
+    }
     .proj-desc { font-size: 1rem; color: var(--ink-2); line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1; }
     .proj-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
 
@@ -503,22 +507,11 @@
       <p class="proj-desc">Built a <span class="hi"> multi-agent AI workflows</span> to help radiologists generate accurate, hallucination-free MRI tumor reports.</p>
       <div class="proj-tags">
         <span class="tag">Agentic AI</span>
+        <span class="tag">DICOM</span>
         <span class="tag">RAG</span>
       </div>
       <button class="btn-link" onclick="openModal('modal-hackathon')">View Details →</button>
     </div>
-</div>
-
-<div class="now-section">
-  <div>
-    <h3 class="now-title">Currently</h3>
-    <p class="now-sub">What's on my radar</p>
-  </div>
-  <ul class="now-list">
-    <li><strong>Reading:</strong> Research papers on Foundation Models applied to Biology and single-cell RNA sequencing.</li>
-    <li><strong>Exploring:</strong> High-performance Machine Learning frameworks (JAX) for faster biomechanical simulations.</li>
-    <li><strong>Training:</strong> Analyzing my running biomechanics to optimize my 5k baseline (currently at 26 min).</li>
-  </ul>
 </div>
 
 <div class="divider"><hr></div>
@@ -548,7 +541,7 @@
     <div class="modal-hero-img"></div>
     <div class="modal-text">
       <p>Radiologists often spend too much time reviewing manually patient history and previous scans to draft current tumor reports, creating significant bottlenecks in the clinical workflow. For this hackathon, our goal was to build an AI-driven system that would assist radiologists in drafting MRI tumor reports while integrating easily into their existing routine.</p>
-      <p>Over 48 hours, competing against 23 teams, we designed and built a multi-agent AI workflow based on a long- and short-term memory. To differentiate our solution, I integrated a RAG pipeline strictly grounded in RECIST 1.1 medical guidelines. To guarantee a zero-hallucination environment for clinical use, we forced the LLM to output its responses exclusively in a structured JSON format, ensuring data integrity and consistency.</p>
+      <p>Over 48 hours, competing against 23 teams, we designed and built a multi-agent AI workflow based on a long- and short-term memory and DICOM MRI scans. To differentiate our solution, I integrated a RAG pipeline strictly grounded in RECIST 1.1 medical guidelines. To guarantee a zero-hallucination environment for clinical use, we forced the LLM to output its responses exclusively in a structured JSON format, ensuring data integrity and consistency.</p>
       <p>We successfully bridged the gap between agentic AI capabilities and strict medical compliance. Our app earned us a spot in the Top 8.</p>
     </div>
   </div>
