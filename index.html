@@ -39,6 +39,18 @@
     .nav-links { display: flex; gap: 2.5rem; list-style: none; }
     .nav-links a { font-family: 'DM Mono', monospace; font-size: 0.85rem; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink-2); text-decoration: none; transition: color 0.2s; }
     .nav-links a:hover { color: var(--teal); }
+    .nav-cta {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.85rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: #fff;
+      background: var(--teal);
+      text-decoration: none;
+      padding: 0.5rem 1.2rem;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--ink); }
 
     /* ── HERO ── */
     #hero { min-height: 100vh; display: flex; align-items: center; max-width: 1000px; margin: 0 auto; padding: 8rem 2rem 4rem; }
@@ -261,7 +273,6 @@
       <p class="hero-sub">Using my engineering skills to solve real clinical challenges and make a meaningful impact on healthcare.</p>
       <div class="hero-actions">
         <a href="#projects" class="btn-primary">View Work</a>
-        <a href="cv.pdf" class="btn-ghost" download>Download CV</a>
         <a href="https://www.linkedin.com/in/cécile-soudé-384027218" target="_blank" class="btn-ghost">LinkedIn</a>
         <a href="mailto:cecile.soude25@imperial.ac.uk" class="btn-ghost">Email</a>
       </div>
